@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Main {
+public class storeRainWater {
     public static int storeWater(ArrayList<Integer> height) {
         int maxWater = 0;
 
