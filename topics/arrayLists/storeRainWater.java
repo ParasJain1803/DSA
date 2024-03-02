@@ -1,3 +1,5 @@
+// This is different from Trapping rainwater
+
 import java.util.*;
 
 public class storeRainWater {
