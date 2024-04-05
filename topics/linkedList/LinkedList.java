@@ -129,7 +129,6 @@ public class LinkedList {
         }
         head = prev;
     }
-
     public static void main(String[] args) {
         
     }
