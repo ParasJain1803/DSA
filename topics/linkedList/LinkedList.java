@@ -11,16 +11,17 @@ public class LinkedList {
 
     public static Node head;
     public static Node tail;
-    public static Node size;
+    public static int size;
 
     public void addFirst(int data) {
         Node newNode = new Node(data);
         size++;
         if(head == null) {
             head = tail = newNode;
+        } else {
+            newNode.next = head;
+            head = newNode;
         }
-        newNode.next = head;
-        head = newNode;
     }
 
     public void addLast(int data) {
@@ -28,9 +29,11 @@ public class LinkedList {
         size++;
         if(head == null) {
             head = tail = newNode;
-        }        
-        tail.next = newNode;
-        tail = newNode;
+        } else {
+            tail.next = newNode;
+            tail = newNode;
+        }      
+        
     }
 
     public void add(int idx, int data) {
@@ -52,12 +55,16 @@ public class LinkedList {
     }
 
     public void printLL() {
+        if(head == null) {
+            System.out.println("List is empty");
+            return;
+        }
         Node temp = head;
-        while (temp != null) {
+        while(temp != null) {
             System.out.print(temp.data + "->");
             temp = temp.next;
         }
-        System.out.println(null);
+        System.out.println("null");
     }
 
     public int removeFirst() {
@@ -107,7 +114,7 @@ public class LinkedList {
             return idx;
         }
         Node temp = head;
-        while (temp != null) {
+        while(temp != null) {
             if(temp.data == key) {
                 return idx;
             }
@@ -130,6 +137,16 @@ public class LinkedList {
         head = prev;
     }
     public static void main(String[] args) {
-        
+        LinkedList newNode = new LinkedList();
+        for (int i = 0; i <= 100; i++) {
+            newNode.addLast(i);
+        }
+        newNode.printLL();
+        System.out.println("69 is at position: " + newNode.itrSearch(69));
+        newNode.reverseLL();
+        newNode.printLL();
+        System.err.println("size = " + size);
+        System.out.println(newNode.removeLast() + " removed");
+        System.err.println("size = " + size);
     }
 }
