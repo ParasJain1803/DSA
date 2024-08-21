@@ -13,7 +13,7 @@ public class Palindrome {
     public static Node tail;
     public static Node size;
 
-     public int findMid(Node head) {
+     public Node findMid(Node head) {
         Node slow = head;
         Node fast = head;
 
