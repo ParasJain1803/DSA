@@ -3,17 +3,17 @@ import java.util.ArrayList;
 public class stackArrayList {
     static class Stack {
         static ArrayList<Integer> list = new ArrayList<>();
-        public static boolean isEmpty() {
+        public boolean isEmpty() {
             return list.size() == 0;
         }
 
         // push
-        public static void push(int data) {
+        public void push(int data) {
             list.add(data);
         }
 
         // pop
-        public static int pop() {
+        public int pop() {
             if (isEmpty()) {
                 return -1;
             }
@@ -23,7 +23,7 @@ public class stackArrayList {
         }
 
         // peek
-        public static int peek() {
+        public int peek() {
             if (isEmpty()) {
                 return -1;
             }
