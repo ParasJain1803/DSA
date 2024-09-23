@@ -11,11 +11,11 @@ public class stackLinkedList {
     static class Stack {
         static Node head = null;
 
-        public static boolean isEmpty() {
+        public  boolean isEmpty() {
             return head == null;
         }
 
-        public static void push(int data) {
+        public  void push(int data) {
             Node newNode = new Node(data);
 
             if (isEmpty()) {
@@ -27,7 +27,7 @@ public class stackLinkedList {
             head = newNode;
         }
 
-        public static int pop() {
+        public  int pop() {
             if(isEmpty()) {
                 return -1;
             }
@@ -37,7 +37,7 @@ public class stackLinkedList {
             return top;
         }
 
-        public static int peek() {
+        public  int peek() {
             if(isEmpty()) {
                 return -1;
             }
