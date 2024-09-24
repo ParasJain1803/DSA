@@ -1,3 +1,5 @@
+
+
 public class Cycle {
     public static class Node {
         int data;
